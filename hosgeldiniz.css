@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    background-image:url(resim/Hoş\ manzara\ kullanılcak.jpg);
+    background-size: cover;
+}
+.contanier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+.yazi1{
+    color: white; 
+    background-image:url(resim/Hoş\ manzara\ kullanılcak.jpg);
+    background-size: cover;
+    border-radius:50px;
+    font-size: 100px;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    animation:yazi-anim 1.5s ease;
+    position: relative;
+    background-color: black;
+}
+.yazi2{
+    color: white;
+    font-size:70px;
+    letter-spacing: 9px;
+}
+.yazi2 a{
+    color: orange;
+    text-decoration: none;
+}
+.yazi3{
+    color: white;
+    font-size: 40px;
+    margin-top:10px;
+    display: inline-block;
+}
+
+@keyframes yazi-anim{
+    0%{
+        margin-bottom:-90px;
+    }
+    30%{
+        margin-bottom:-90px;
+    }
+    90%{
+        margin-bottom: -90px;
+    }
+}
