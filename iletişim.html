@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,111 +8,149 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        body{
+        body {
             background-color: rgb(180, 180, 180);
         }
     </style>
 </head>
+
 <body>
-     üst menü
-     <nav class="navbar navbar-dark bg-dark fixed-top">
+    üst menü
+    <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="hosgeldiniz.html">Örnek Site</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-            aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menü</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
+            <a class="navbar-brand" href="hosgeldiniz.html">Örnek Site</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menü</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="hakkımızda.html">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="iletişim.html">İletişim</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Kategoriler
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="aksiyon.html">Aksiyon</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="korku.html">Korku</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="macera.html">Macera</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="yarıs.html">Yarış</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Platform
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="bilgisayar.html">Bilgisayar</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="ps.html">PS</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="xbox.html">XBOX</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Aramak istediğinizi yazınız"
+                            aria-label="Search">
+                        <button type="button" class="btn btn-outline-success">Ara</button>
+                    </form>
+                </div>
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="index.html">Hakkımızda</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">İletişim</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Kategoriler
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="aksiyon.html">Aksiyon</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="korku.html">Korku</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="macera.html">Macera</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="yarıs.html">Yarış</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Platform
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="bilgisayar.html">Bilgisayar</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="ps.html">PS</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="xbox.html">XBOX</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Aramak istediğinizi yazınız"
-                  aria-label="Search">
-                <button type="button" class="btn btn-outline-success">Ara</button>
-              </form>
-            </div>
-          </div>
         </div>
-      </nav>
+    </nav>
 
 
     <!-- iletişim formu -->
     <div class="container" style="margin-top: 30px;">
-    <form >
-        <fieldset>
-        <h2 style="text-align: center; list-style-type: none;"><a href="iletişim.html">İletişim Formu</a></h2>
-        <div class="mb-3">
-            <input class="form-control" id="exampleFormControlInput1" placeholder="Adınız Soyadınız" type="text" required>
-        </div>
-        <div class="mb-3">
-            <input class="form-control" id="exampleFormControlInput1" placeholder="E-Posta Adresiniz" type="email" required>
-        </div>
-        <div class="mb-3">
-            <input class="form-control" id="exampleFormControlInput1" type="tel" placeholder="Telefon Numaranızı Girin" required>
-        </div>
-        <div class="mb-3">
-            <textarea class="form-control" id="exampleFormControlInput1" id="exampleFormControlTextarea1" placeholder="Şikayetinizi Buraya Giriniz" required></textarea>
-        </div>
-        <div class="mb-3">
-            <a href="index.html"><button type="button" style="margin-top: 20px; width: 300px; margin-left: 500px;" href="index.html" class="btn btn-outline-success">Gönder</button></a>
-        </div>
-    </fieldset>
-    </form> 
-</div>
+        <form>
+            <fieldset>
+                <h2 style="text-align: center; list-style-type: none;"><a href="iletişim.html">İletişim Formu</a></h2>
+                <div class="mb-3">
+                    <input class="form-control" id="exampleFormControlInput1" placeholder="Adınız Soyadınız" type="text"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" id="exampleFormControlInput1" placeholder="E-Posta Adresiniz"
+                        type="email" required>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" id="exampleFormControlInput1" type="tel"
+                        placeholder="Telefon Numaranızı Girin" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="exampleFormControlInput1" id="exampleFormControlTextarea1"
+                        placeholder="Şikayetinizi Buraya Giriniz" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <div id="liveAlertPlaceholder"></div>
+                    <button type="button" class="btn  btn-outline-success" id="liveAlertBtn">Gönder</button>
+                </div>
+            </fieldset>
+        </form>
+
+
+        <script>
+            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            const appendAlert = (message, type) => {
+                const wrapper = document.createElement('div')
+                wrapper.innerHTML = [
+                    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                    `   <div>${message}</div>`,
+                    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                    '</div>'
+                ].join('')
+
+                alertPlaceholder.append(wrapper)
+            }
+
+            const alertTrigger = document.getElementById('liveAlertBtn')
+            if (alertTrigger) {
+                alertTrigger.addEventListener('click', () => {
+                    appendAlert('Formunuz Yetkililere Başarıyla Gönderilmiştir', 'success')
+                })
+            }
+            else{
+                alertTrigger.addEventListener('click',() => {
+                    appendAlert('Formunuz İletilemedi Tekrar Deneyin','alert')
+                })
+            }
+        </script>
+    </div>
+
 </body>
-</html> 
+
+</html>
