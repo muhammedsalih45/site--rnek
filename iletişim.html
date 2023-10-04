@@ -12,18 +12,20 @@
     <style>
         @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 
-        .iltişim {
+        .iltişim {  
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
         }
-        .iletişim_form{
+
+        .iletişim_form {
             font-family: "Roboto", Helvetica, Arial, sans-serif;
             color: #888;
             background: #79A7A8;
         }
+
         .container2 {
             max-width: 1000px;
             width: 100%;
@@ -45,7 +47,7 @@
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
         }
 
- 
+
 
         .form-control {
             border: none !important;
@@ -55,12 +57,10 @@
             width: 100%;
         }
 
-        .form_control{
+        .form_control {
             background-color: gray;
-            background-attachment:fixed;
+            background-attachment: fixed;
         }
-
-
     </style>
 </head>
 
@@ -141,32 +141,62 @@
 
 
     <!-- iletişim formu -->
+
     <body class="form_control">
-    <div class="container" style="margin-top: 30px;">          
+        <div class="container" style="margin-top: 30px;">
             <div class="container2">
-                <form class="" id="contact" style="font-family:Roboto, Helvetica, Arial, sans-serif; color: #3a3a3a; background: #c7c7c7;">
-                    <h2 style="text-align: center;"><a href="iletişim.html" style="text-decoration: none; color:#3a3a3a;">İletişim Sayfası</a></h2>
+                <form class="" id="contact"
+                    style="font-family:Roboto, Helvetica, Arial, sans-serif; color: #3a3a3a; background: #c7c7c7;">
+                    <h2 style="text-align: center;"><a href="iletişim.html"
+                            style="text-decoration: none; color:#3a3a3a;">İletişim Sayfası</a></h2>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Adınız Soyadınız</label>
-                      </div>
-                      <div class="form-floating">
+                    </div>
+                    <div class="form-floating">
                         <input type="email" class="form-control" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Email Adresi</label>
-                      </div>
-                      <div class="form-floating mb-3">
+                    </div>
+                    <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingInput" placeholder="Konu">
                         <label for="floatingInput">Konu</label>
-                      </div>
-                      <div class="form-floating">
-                        <textarea class="form-control" placeholder="Şikayetinizi Buraya yazınız" id="floatingTextarea"></textarea>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Şikayetinizi Buraya yazınız"
+                            id="floatingTextarea"></textarea>
                         <label for="floatingTextarea">Şikayetinizi Buraya Yazınız</label>
-                      </div>
-                      <a href="iletişim.html"><button type="button" class="btn btn-outline-success">Gönder</button></a>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Gönder
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">İsteğinizi Veya Şikayetinizi Gönderiyosunuz</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Emin misiniz?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Kapat</button>
+                                    <a href="iletişim.html"><button type="button" class="btn btn-primary">Gönder</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
-    </div>
-    </div>
+        </div>
+        </div>
+    </body>
 </body>
-</body>
+
 </html>
