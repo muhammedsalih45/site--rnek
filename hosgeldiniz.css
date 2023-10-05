@@ -3,6 +3,8 @@ body{
     font-family: 'Roboto', sans-serif;
     background-size: cover;
     justify-content: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 .contanier{
     display: flex;
