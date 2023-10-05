@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,104 +8,238 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+<style>
+    body {
+        background-image: url(resim/elden\ ring.jpg);
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        background-color: #f0f0f0;
+        /* Arka plan rengi */
+        padding: 20px;
+        /* İçerik etrafındaki boşluk */
+    }
+
+    .content {
+        text-align: center;
+        max-width: 800px;
+        /* İçerik genişliği sınırlaması */
+    }
+
+    /* Başlık stilleri */
+    b {
+        font-size: 18px;
+    }
+
+    /* Paragraf stilleri */
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        /* Paragraf arası boşluk */
+    }
+
+    .box {
+        transition: all 0.4s;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .box:hover {
+        transform: translateY(-5px);
+    }
+</style>
+
 <body>
-        <!-- menü kısmı -->
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Örnek Site</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menü</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="hakkımızda.html">Hakkımızda</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="iletişim.html">İletişim</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Kategoriler
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="aksiyon.html">Aksiyon</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="korku.html">Korku</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="macera.html">Macera</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="yarıs.html">Yarış</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Platform
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="bilgisayar.html">Bilgisayar</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="ps.html">PS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="xbox.html">XBOX</a></li>
-                                </ul>
-                            </li>
-                          </ul>
-                        </ul>
-                        <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Aramak istediğinizi yazınız"
-                                aria-label="Search">
-                            <button type="button" class="btn btn-outline-success">Ara</button>
-                        </form>
-                    </div>
+    <!-- menü kısmı -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Örnek Site</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menü</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="hakkımızda.html">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="iletişim.html">İletişim</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Kategoriler
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="aksiyon.html">Aksiyon</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="korku.html">Korku</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="macera.html">Macera</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="yarıs.html">Yarış</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Platform
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="bilgisayar.html">Bilgisayar</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="ps.html">PS</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="xbox.html">XBOX</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Aramak istediğinizi yazınız"
+                            aria-label="Search">
+                        <button type="button" class="btn btn-outline-success">Ara</button>
+                    </form>
                 </div>
             </div>
-        </nav>
-
-           sayfa geçiş en alt kısım
-  <div class="container mt-5" style="margin-right: 100px;">
-    <nav aria-label="Page navigation example">
-      <ul class="pagination justify-content-end">
-        <li class="page-item">
-          <a class="page-link" href="yarıs.html">öncesi</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="aksiyon.html">1</a></li>
-        <li class="page-item"><a class="page-link" href="korku.html">2</a></li>
-        <li class="page-item"><a class="page-link" href="macera.html">3</a></li>
-        <li class="page-item"><a class="page-link" href="yarıs.html">4</a></li>
-        <li class="page-item">
-          <a class="page-link" href="aksiyon.html">sonraki</a>
-        </li>
-      </ul>
+        </div>
     </nav>
-  </div> 
+
+    <div class="container">
+        <img src="resim/call of duty.jpg" class="box"
+            style="display: flex; width: 200px; height: 200px;margin-top: 70px; border-radius: 180px; flex-direction:column-reverse;">
+        <img src="resim/calisto.jpg" class="box"
+            style="display: flex; width: 200px; height: 200px;margin-top: 70px; border-radius: 180px; flex-direction:column-reverse; margin-left: 90px;">
+        <img src="resim/detroit.jpg" class="box"
+            style="display: flex; width: 200px; height: 200px;margin-top: 70px; border-radius: 180px; flex-direction:column-reverse; margin-left:90px;">
+    </div>
+    <div class="container" style="display: flex; margin-top:-70px;">
+        <div class="content" style="justify-content: center; margin-top: 130px;">
+            <b>Misyon Açıklaması:</b>
+            <p>
+                "Örnek site" oyun tutkunlarına, oyun dünyasının derinliklerine dalarken bir araya gelmeleri ve
+                paylaşmaları için bir platform sunar. Misyonumuz, oyunseverlerin tutkularını keşfetmelerine ve oyunlar
+                hakkında bilgi edinmelerine olanak tanırken, oyun topluluğunu bir araya getirerek arkadaşlıklar ve
+                deneyimler oluşturmaktır. Oyun dünyasında yeni ve heyecan verici deneyimler sunarak, oyuncuların keyif
+                alacakları bir oyun deneyimi yaşamalarını sağlamak için çaba gösteriyoruz.
+            </p>
+            <b>Vizyon Açıklaması:</b>
+            <p>
+                "Örnek Site" olarak, oyun dünyasının geleceğini şekillendirmeyi hedefliyoruz. Vizyonumuz, oyun
+                topluluğunu bir adım öteye taşıyarak, oyunların sadece eğlenceli bir aktivite olmanın ötesine geçtiği,
+                sosyal bağlar kurulduğu ve öğrenme fırsatları yarattığı bir dünya inşa etmektir. Oyunun gücünü kullanan
+                bir
+                topluluk oluşturmak ve herkesin bu heyecan verici dünyada yer almasını sağlamak için çalışıyoruz.
+                Gelecekte,
+                daha fazla oyunseverin katılımıyla daha büyük ve daha etkili bir topluluk inşa etmeye devam edeceğiz.
+            </p>
+            <p>
+                Bu misyon ve vizyon açıklamaları, oyunseverlere oyun topluluğunuzun hedeflerini, değerlerini ve
+                amaçlarını
+                anlatırken oyun sitesi için güçlü bir yol haritası sunabilir. Özgün ve çekici bir misyon ve vizyon,
+                oyunseverlerin siteye bağlanmasına ve katkıda bulunmasına yardımcı olabilir.
+            </p>
+            <p>
+                <b>Projelerimiz:</b>
+                <p>
+                1. **Yeni Oyunlar Ekleme**: Mevcut oyun koleksiyonunu genişletmek için yeni oyunlar eklemek. Bu
+                oyunların çeşitliliğini artırmak için farklı türlerden oyunlar seçmek.
+                </p>
+                <p>
+                2. **Kullanıcı Dostu Arayüz Geliştirme**: Oyun sitesinin kullanıcı arayüzünü iyileştirmek. Daha kolay
+                gezinme, arama ve oyun seçme seçenekleri eklemek.
+            </p>
+            <p>
+                3. **Topluluk Oluşturma Özellikleri**: Oyuncular arasında etkileşimi artırmak için forumlar, sohbet
+                odaları veya oyunlar için yorum bırakma gibi topluluk özellikleri eklemek.
+            </p>
+            <p>
+                4. **Mobil Uygulama Geliştirme**: Mobil cihazlarda oyun oynamayı kolaylaştırmak için bir mobil uygulama
+                geliştirmek.
+            </p>
+            <p>
+                5. **Oyun İçi Satın Alma ve Abonelik Sistemi**: Oyunculara oyun içi satın alma veya abonelik seçenekleri
+                sunmak. Bu, gelirinizi artırabilir.
+            </p>
+            <p>
+                6. **İstatistik ve Analitik Araçlar**: Kullanıcı etkileşimlerini ve oyun performansını izlemek için
+                analitik araçlar eklemek. Bu, oyunlarınızı optimize etmenize yardımcı olabilir.
+            </p>
+            <p>
+                7. **Oyun Geliştiricileri ile İşbirliği**: Bağımsız oyun geliştiricileri ile işbirliği yaparak özgün
+                içerikler eklemek ve yeni oyunlar geliştirmek.
+            </p>
+            <p>
+                8. **Reklam ve Pazarlama Stratejileri**: Oyun sitesini tanıtmak için reklam ve pazarlama stratejileri
+                geliştirmek. Sosyal medya, bloglar, reklam kampanyaları gibi farklı kanalları kullanmak.
+            </p>
+            <p>
+                9. **Güvenlik ve Veri Koruma Güncellemeleri**: Kullanıcı bilgilerini ve oyun verilerini güvende tutmak
+                için güvenlik önlemlerini güncellemek.
+            </p>
+            <p>
+                10. **Kullanıcı Geri Bildirimleri Değerlendirmesi**: Kullanıcıların geri bildirimlerini düzenli olarak
+                incelemek ve siteyi geliştirmek için bu geri bildirimleri kullanmak.
+            </p>
+            <p>
+                11. **Yarışmalar ve Etkinlikler Düzenleme**: Oyuncuların katılmasını teşvik etmek için yarışmalar,
+                turnuvalar veya özel etkinlikler düzenlemek.
+        </div>
+    </div>
+    <div class="container">
+        <img src="resim/dying light.jpg" class="box"
+            style="display: flex; width: 200px; height: 200px;margin-top: 70px; border-radius: 180px; flex-direction:column-reverse;">
+        <img src="resim/god of war.jpg" class="box"
+            style="display: flex; width: 200px; height: 200px;margin-top: 70px; border-radius: 180px; flex-direction:column-reverse; margin-left: 90px;">
+        <img src="resim/horizon.jpg" class="box"
+            style="display: flex; width: 200px; height: 200px;margin-top: 70px; border-radius: 180px; flex-direction:column-reverse; margin-left:90px;">
+    </div>
+    </div>
+
+    <!-- sayfa geçiş en alt kısım -->
+    <div class="container mt-5">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+                <li class="page-item">
+                    <a class="page-link" href="yarıs.html">öncesi</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="aksiyon.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="korku.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="macera.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="yarıs.html">4</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="aksiyon.html">sonraki</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </body>
 
 </body>
+
 </html>
